@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var messageText: UILabel!
     
     @IBAction func buttonPressed(sender: UIButton) {
-        messageText.text=sender.currentTitle + " World!"
+        messageText.text=sender.currentTitle! + " World!"
     }
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -29,7 +29,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         else {
             euroToDollar.text="Euro to Dollar"
             var amount = (edAmount.text as NSString).floatValue
-            var total=amount*Float(0.8)
+            var total=amount*Float(1.26)
             edTotal.text=NSString(format: "%.2f", total)
         }
         
@@ -73,7 +73,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-   
+   func textFieldDidEndEditing(textField: UITextField!) {
+    
+    
+    
+    }
     
     
     override func viewDidLoad() {

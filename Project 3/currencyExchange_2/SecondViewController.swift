@@ -8,24 +8,14 @@
 
 import UIKit
 
-protocol currencyUpdateDelegate{
-    func numbersDidUpdate(controller:SecondViewController, var doToEu: String, var euToDo: String, var poToDo: String, var doToPo: String, var euToPound: String, var poToEu: String)
-}
-
 class SecondViewController: UIViewController, UITextFieldDelegate {
 
-var delegate:currencyUpdateDelegate! = nil
-    
     @IBOutlet weak var euToDo: UITextField!
     @IBOutlet weak var doToEu: UITextField!
     @IBOutlet weak var poToEu: UITextField!
     @IBOutlet weak var euToPound: UITextField!
     @IBOutlet weak var poToDo: UITextField!
     @IBOutlet weak var doToPo: UITextField!
-    
-    @IBAction func save(sender: UIButton) {
-        delegate!;numbersDidUpdate(self, doToEu:String, euToDo: String, poToDo: String, doToPo: String, euToPound: String, poToEu:String)
-    }
     
     override func viewDidLoad() {
         euToDo.delegate=self
@@ -39,8 +29,6 @@ var delegate:currencyUpdateDelegate! = nil
 
         // Do any additional setup after loading the view.
     }
-    
-    //make "save" button and variables for all currencies
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "doneCurr"{

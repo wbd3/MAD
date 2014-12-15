@@ -9,30 +9,13 @@
 //in version 6.0
 
 import UIKit
+import Social
 
-class FirstViewController: UIViewController, UITextFieldDelegate, currencyUpdateDelegate {
-    var etd=Float(1.26)
-    var dte=Float(0.8)
-    var ptd=Float(1.60)
-    var dtp=Float(0.63)
-    var etp=Float(0.78)
-    var pte=Float(1.28)
+class FirstViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
         textField.resignFirstResponder()
         return true
     }//from tipCalculator
-    
-    func numbersDidUpdate(controller:SecondViewController, var doToEu: String, var euToDo: String, var poToDo: String, var doToPo: String, var euToPound: String, var poToEu: String){
-      var etd=euToDo
-        var dte=doToEu
-        var ptd=poToDo
-        var dtp=doToPo
-        var etp=euToPound
-        var pte=poToEu
-    }
-    
-    
-    
     @IBOutlet weak var edAmount: UITextField!
     @IBOutlet weak var edTotal: UILabel!
     @IBOutlet weak var euroToDollar: UILabel!
@@ -40,14 +23,14 @@ class FirstViewController: UIViewController, UITextFieldDelegate, currencyUpdate
         if sender.on {
             euroToDollar.text="Dollar to Euro"
             var amount = (edAmount.text as NSString).floatValue
-            var total = amount*dte
+            var total = amount*Float(0.8)
             edTotal.text=NSString(format: "%.2f", total)
             
         }
         else {
             euroToDollar.text="Euro to Dollar"
             var amount = (edAmount.text as NSString).floatValue
-            var total=amount*etd
+            var total=amount*Float(1.26)
             edTotal.text=NSString(format: "%.2f", total)
         }
         
@@ -61,13 +44,13 @@ class FirstViewController: UIViewController, UITextFieldDelegate, currencyUpdate
         if sender.on {
             poundToEuro.text="Euro to Pound"
             var amount=(peAmount.text as NSString).floatValue
-            var total = amount*etp
+            var total = amount*Float(0.78)
             peTotal.text=NSString(format: "%.2f", total)
         }
         else {
             poundToEuro.text="Pound to Euro"
             var amount=(peAmount.text as NSString).floatValue
-            var total = amount*pte
+            var total = amount*Float(1.28)
             peTotal.text=NSString(format: "%.2f", total)
         }
     }
@@ -80,13 +63,13 @@ class FirstViewController: UIViewController, UITextFieldDelegate, currencyUpdate
         if sender.on {
             poundToDollar.text="Dollar to Pound"
             var amount=(pdAmount.text as NSString).floatValue
-            var total = amount*dtp
+            var total = amount*Float(0.63)
             pdTotal.text=NSString(format: "%.2f", total)
         }
         else {
             poundToDollar.text="Pound to Dollar"
             var amount=(pdAmount.text as NSString).floatValue
-            var total = amount*ptd
+            var total = amount*Float(1.60)
             pdTotal.text=NSString(format: "%.2f", total)
         }
     }
@@ -103,6 +86,12 @@ class FirstViewController: UIViewController, UITextFieldDelegate, currencyUpdate
         
     }
 
+    @IBAction func shareToFacebook() {
+        var shareToFacebook : SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+        shareToFacebook.setInitialText("Come Download This Currency Exchange App!")
+        self.presentViewController(shareToFacebook, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         edAmount.delegate=self
         peAmount.delegate=self

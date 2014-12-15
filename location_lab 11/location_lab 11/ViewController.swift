@@ -57,7 +57,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     //called when a location cannot be determined
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
         var errorType=String()
-        if let clError= CLError.toRaw(){
+        if let clError = CLError.toRaw (){
             if CLError == .Denied {
                 errorType="access denied"
                 

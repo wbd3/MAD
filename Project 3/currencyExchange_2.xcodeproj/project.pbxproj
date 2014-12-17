@@ -17,7 +17,6 @@
 		179CCE411A11F0240052DE9B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179CCE401A11F0240052DE9B /* SecondViewController.swift */; };
 		179CCE431A1261000052DE9B /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179CCE421A1261000052DE9B /* Currency.swift */; };
 		17E281941A3EA09100C3C214 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E281931A3EA09100C3C214 /* Social.framework */; };
-		17E281C61A3EA9AE00C3C214 /* Project 3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17E281C51A3EA9AD00C3C214 /* Project 3.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +44,6 @@
 		179CCE401A11F0240052DE9B /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		179CCE421A1261000052DE9B /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		17E281931A3EA09100C3C214 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		17E281C51A3EA9AD00C3C214 /* Project 3.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Project 3.storyboard"; path = "../../Project 3.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +90,6 @@
 				172A96541A0BDBCB0079AA84 /* AppDelegate.swift */,
 				172A96561A0BDBCB0079AA84 /* FirstViewController.swift */,
 				172A965A1A0BDBCC0079AA84 /* Main.storyboard */,
-				17E281C51A3EA9AD00C3C214 /* Project 3.storyboard */,
 				179CCE421A1261000052DE9B /* Currency.swift */,
 				179CCE401A11F0240052DE9B /* SecondViewController.swift */,
 				172A96761A0BDDCC0079AA84 /* ThirdViewController.swift */,
@@ -209,7 +206,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				172A965C1A0BDBCC0079AA84 /* Main.storyboard in Resources */,
-				17E281C61A3EA9AE00C3C214 /* Project 3.storyboard in Resources */,
 				172A96611A0BDBCD0079AA84 /* LaunchScreen.xib in Resources */,
 				172A965E1A0BDBCD0079AA84 /* Images.xcassets in Resources */,
 			);
